@@ -1,5 +1,2 @@
-#import <IosAutocompleteSpec/IosAutocompleteSpec.h>
-
-@interface IosAutocomplete : NSObject <NativeIosAutocompleteSpec>
-
-@end
+#import <React/RCTBridgeModule.h>
+#import <React/RCTViewManager.h>
