@@ -4,23 +4,27 @@ Autocomplete address natively without any external API. This module is using MKL
 
 ## Installation
 
-
 ```sh
 npm install react-native-ios-autocomplete
 ```
 
-
 ## Usage
 
-
 ```js
-import { multiply } from 'react-native-ios-autocomplete';
+import AddressAutocomplete from 'react-native-ios-autocomplete';
 
-// ...
+const suggestions = await AddressAutocomplete.getAddressSuggestions('Denver');
+console.log(suggestions);
 
-const result = multiply(3, 7);
+const details = await AddressAutocomplete.getAddressDetails('Denver');
+console.log(details);
+
+const reverseGeocodeResult = await AddressAutocomplete.reverseGeocodeLocation(
+  22.16887,
+  52.12333
+);
+console.log(reverseGeocodeResult);
 ```
-
 
 ## Contributing
 
