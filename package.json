@@ -1,6 +1,6 @@
 {
   "name": "react-native-ios-autocomplete",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Autocomplete address natively without any external API. This module is using MKLocalSearchCompleter Class in IOs, to provide suggestions to user entered address.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
