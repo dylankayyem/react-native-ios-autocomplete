@@ -1,6 +1,7 @@
 import { NativeModules, Platform } from 'react-native';
 
 export type AddressDetails = {
+  // ✅ legacy fields (still returned)
   title: string;
   coordinate: {
     latitude: number;
@@ -12,6 +13,31 @@ export type AddressDetails = {
     longitudeDelta: number;
     latitudeDelta: number;
   };
+
+  // ✅ new fields (added)
+  location?: {
+    latitude: number;
+    longitude: number;
+  };
+
+  addressRepresentations?: string[];
+
+  address?: {
+    street?: string;
+    house?: string;
+    city?: string;
+    region?: string; // state/admin area
+    postalCode?: string;
+    country?: string;
+    isoCountryCode?: string;
+  };
+
+  kind?: 'poi' | 'address';
+  poiCategory?: string | null;
+
+  phoneNumber?: string | null;
+  url?: string | null;
+  timeZone?: string | null;
 };
 
 export type ReverseGeocodeResult = {

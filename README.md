@@ -15,15 +15,35 @@ import AddressAutocomplete from 'react-native-ios-autocomplete';
 
 const suggestions = await AddressAutocomplete.getAddressSuggestions('Denver');
 console.log(suggestions);
+// string[]
 
 const details = await AddressAutocomplete.getAddressDetails('Denver');
 console.log(details);
+// {
+//   title: string;
+//   coordinate: {
+//     latitude: number;
+//     longitude: number;
+//   };
+//   region: {
+//     longitude: number;
+//     latitude: number;
+//     longitudeDelta: number;
+//     latitudeDelta: number;
+//   };
+// };
 
 const reverseGeocodeResult = await AddressAutocomplete.reverseGeocodeLocation(
   22.16887,
   52.12333
 );
 console.log(reverseGeocodeResult);
+// {
+//  street: string;
+//  house: string;
+//  zip: number;
+//  country: string;
+// };
 ```
 
 ## Contributing
